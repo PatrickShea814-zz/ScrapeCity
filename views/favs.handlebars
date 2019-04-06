@@ -1,0 +1,41 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h3 class="display-4">Saved Deals</h3>
+    </div>
+</div>
+
+<br><br>
+
+<a href="/">
+    <button id="return-btn" class="btn btn-dark ml-5">
+        Return to Scraped Articles
+    </button>
+</a>
+
+<br><br>
+
+<table class="table bg-dark text-white">
+    <thead class="thead-secondary">
+        <tr>
+            <th scope="col">Items</th>
+            <th scope="col">Remove From Favorites</th>
+            <th scope="col">Add Notes</th>
+            <th scope="col">Notes</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td><a href="{{link}}">{{title}}</a></td>
+            <td><button id={{id}} class="unfav-button">Remove from Favorites</button></td>
+            <td><button id={{id}} class="note-button">Add Notes</button></td>
+            <td id="fav-notes">{{notes}}</td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>
+
+
+{{!-- <script src="" async defer></script> --}}

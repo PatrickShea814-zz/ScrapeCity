@@ -1,0 +1,49 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">The SlickDeals Web Scraper!</h1>
+        <p class="lead">This application scrapes deals from slickdeals.net to save you money! Save your favorite deals
+            add notes about them.</p>
+    </div>
+</div>
+
+{{!-- <table class="table bg-secondary text-white">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Favorite Articles</th>
+                <th scope="col">Remove from Favorites</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table> --}}
+
+<a href="/favorited">
+    <button id="all-favs" class="btn btn-dark ml-5">
+        Go to Saved Favorite Deals
+    </button>
+</a>
+<br><br>
+
+<table class="table bg-dark text-white">
+    <thead class="thead-secondary">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Deals</th>
+            <th scope="col">Add/Remove to Favorites</th>
+        </tr>
+    </thead>
+    <tbody id="table-body">
+        {{#each data}}
+        <tr>
+            <th scope="row">1</th>
+            <td><a href="{{link}}">{{title}}</a></td>
+            <td><button id={{id}} class="fav-button">Add To Favorites</button></td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>
+
+
+{{!-- <script src="" async defer></script> --}}
